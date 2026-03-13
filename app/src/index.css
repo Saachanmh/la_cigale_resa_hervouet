@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@layer components {
+  .bg-status-confirmed {
+    background-color: #3b82f6; /* blue-500 */
+  }
+  .bg-status-arrived {
+    background-color: #10b981; /* green-500 */
+  }
+  .bg-status-noshow {
+    background-color: #ef4444; /* red-500 */
+  }
+  .bg-status-cancelled {
+    background-color: #6b7280; /* gray-500 */
+  }
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
